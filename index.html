@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css_final.css">
+    
+    <script src="./filter.js"></script>
+    
+    <!-- <link rel="stylesheet" href="./css-1.css"> -->
+    <title>Shenstone Inventario</title>
+</head>
+
+<body>
+    <div class="heading">
+    <h1>Catalogo de Plantas Shenstone</h1>
+    <!-- <button id="get-unique-values" onclick="getUniqueValuesFromColumn()">Get unique column values</button> -->
+</div>
+    <div class="outer-wrapper">
+    <div class="table-wrapper">
+    <table id="emp-table">
+        <thead>
+            <th col-index = 1>Nombre</th>
+            <th col-index = 2>Follaje
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+
+            <th col-index = 3>Suelo
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 4>Crecimiento
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 5>Floracion
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 6>Iluminacion
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 7>Riego
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 8>Tipo
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Agapando</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Agave Americana</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>En varios años</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Desertica</td>
+            </tr>
+            <tr>
+                <td>Agave Tequilero Azul</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>En varios años</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Desertica</td>
+            </tr>
+            <tr>
+                <td>Ajillo</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Alamillo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Álamo de río o Sicomoro</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Albahaca</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Alocasia Esqueleto</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Alocasia Frydek</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Alocasia Tallo Negro</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Aloe Dulce</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Alternantera</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Amaranto</td>
+                <td>Anual</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Anachuita</td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Anacua</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Arbol de la Abundancia</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Ave Del Paraíso</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Bambu Verde</td>
+                <td>Perenne</td>
+                <td>Suelo Húmedo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>En varios años</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Bambucillo</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>En varios años</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Begonia</td>
+                <td>Anual</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Begonia</td>
+                <td>Anual</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Begonia de Cera</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Belen</td>
+                <td>Anual</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Boj Arrayán</td>
+                <td>Perenne</td>
+                <td>Suelo Diversos Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Boxus bola</td>
+                <td>Perenne</td>
+                <td>Suelo Diversos Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Boxus ceto</td>
+                <td>Perenne</td>
+                <td>Suelo Diversos Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Boxus pastel</td>
+                <td>Perenne</td>
+                <td>Suelo Diversos Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Boxus pastel</td>
+                <td>Perenne</td>
+                <td>Suelo Diversos Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Boxus topario</td>
+                <td>Perenne</td>
+                <td>Suelo Diversos Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Buganvilia</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Buganvilia Mini</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Buganvilia Tutoreada</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Bulbinia</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Cactus Variedad</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Desertica</td>
+            </tr>
+            <tr>
+                <td>Caladium</td>
+                <td>Perenne</td>
+                <td>Suelo Con Turba y Arena Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Calatea "Amagris"</td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Calatea Lancifolia</td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Calatea Makoyana</td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Calatea Medallón</td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Calatea Pluma de Indio </td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Calendula</td>
+                <td>Anual</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Camaron</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Carissa Común</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Carissa Enana</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Cebollin</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Cedro Espiral</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Cedro Limón</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Celosia Plumosa</td>
+                <td>Anual</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Cenizo</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Chapote Amarillo</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Chapote Prieto</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Cineraria Gris</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Citronella</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Clavelinas</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Clavo Japones Enano</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Clavo Verde Enano</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Col Blanca</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Otoño - Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Col Morada</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Otoño - Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Cola de caballo</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>No Presenta</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Coleo</td>
+                <td>Anual</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Otoño - Invierno - Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Colocasia</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Colocasia Black Magic</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Colorín</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Coma</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Corona de Cristo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Neutro Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Crassula Ovata</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Crassula Princesa Pino</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Crespon</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Crisantemo</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Crossandra</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Croto Cola de Gallo</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Croto Mamey</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Verano - Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Croto Petra Rojo</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Croto Tornillo Rojo</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Croton Excellent</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Crassula Ovata Gollum</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Otoño - Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Cuna de Moises</td>
+                <td>Perenne</td>
+                <td>Suelo Rico En Humus Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Dedo Moro</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Drácena Bicolor</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Drácena Maicera Rayada</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Drácena Muñeca</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Drácena Warneckei</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Duranta</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Duranta Golden</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Duraznillo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Ébano</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Otoño - Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Echeveria Runyonii</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Ecualito Variedad</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Encino Duraznillo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Encino Roble</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Encino Rojo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Encino Siempre Verde</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Escudo Persa</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Blanca</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Borde Amarillo</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Brillo de luna</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Cilindrica</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Golden Hahnii</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Rabo de Tigre</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espada Verde Enana</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Espárrago Cola De Zorro</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Ficus Pandurata</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>En varios años</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Filodendron Cobra</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Filodendron Diente De Tigre</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Filodendron Esqueleto</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Filodendron Silver</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Filodendron Xanadu</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Formio</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Forneo Verde</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Gardenia</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Garra De León</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Gazania</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Geranio Jalapeño</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Geranio Malvon</td>
+                <td>Anual</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Guinea</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Helecho Boston</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>No Presenta</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Helecho Macho</td>
+                <td>Perenne</td>
+                <td>Suelo Con Turba y Arena Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Helecho Nido De Ave</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Hiedra Española</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Hierbabuena</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Higo</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Hoja Elegante</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Una vez al año</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Hortensias</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Huizache</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Hule Cabernet</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Sombra</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Jaboncillo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Invierno - Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Jacaranda</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Japanese Yew</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Jasmin de Arabia Trepador</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Jasmín Gran Duque</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Jasmín Rastrero</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Jasmín Chica</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Jasmín Colgante</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Jasmín Gigante</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Jasmín Limon</td>
+                <td>Perenne</td>
+                <td>Suelo Neutro Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Junipero Punta Dorada</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Kalachoe</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Kalachoe Doble</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Kalachoe Tomentosa</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Lantana arbustiva</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Lantana Rastrera</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Lavanda</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Limon Colina</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Limon Colina Sin Espina</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Limon Limon Italiano</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Limon Persa</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Lirio Persa</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Lirio Rayado</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Otoño - Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Llamarada</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Lluvia de Oro</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Magnolia</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Mandarina</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Margarita Elia</td>
+                <td>Anual</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Mejorana</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Menta</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Mezquite</td>
+                <td>Caducifolio</td>
+                <td>Suelo Húmedo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Mimbre</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Moneda Verde</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Naranja Mienola</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Naranja Tardio</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Naranja Temprano</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Niña En Barco</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Otoño - Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Nispero</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Nogal De Nuez Encarcelada</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Nogal De Nuez Lisa</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Ocotillo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Ojo de Canario</td>
+                <td>Perenne</td>
+                <td>Suelo Húmedo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Invierno</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Olmo</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Óregano</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Órgano</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Desertica</td>
+            </tr>
+            <tr>
+                <td>Palma Areca</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Palma Camedor</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Palma Cyca</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Palma De Madagascar</td>
+                <td>Caducifolio</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Palma Rafis</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Palma Washingtonia Filifera</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Palo Blanco</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Palo Verde</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Panalillos</td>
+                <td>Anual</td>
+                <td>Suelo Húmedo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Pasionaria</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Pasto Mondo O Monkey</td>
+                <td>Perenne</td>
+                <td>Suelo Húmedo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Pasto</td>
+            </tr>
+            <tr>
+                <td>Payasitos</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Invierno</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Pennisetum Rojo</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Pasto</td>
+            </tr>
+            <tr>
+                <td>Pennisetum Verde</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Pasto</td>
+            </tr>
+            <tr>
+                <td>Pensamientos</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Pentas</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Perejil</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Perritos</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Pentunia Mexicana</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Petunias</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Pino Blanco</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Pino Colorado</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Piñanona - Costilla de Adan</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Plumbago</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Pothos Panda</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Retama</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Rhoeo Tricolor</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Rocío</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Romero</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Romero Australiano</td>
+                <td>Anual</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Romero De Nuez</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Romero Falso</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Rosa Del Desierto</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Rosa Laurel</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Rosal</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Rosal Coster</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado a Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Rosario Colgante </td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Ruda</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Russelia</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano - Otoño</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Sabino o Ahuehuete</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Salvia Azul</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Salvia Mexicana</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Verano - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Abudante</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Salvia Morada</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Salvia Roja</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Santolina</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Sauce de Río</td>
+                <td>Caducifolio</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Sedum</td>
+                <td>Caducifolio</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Senecio Azul</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Signonio Blanco</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Signonio Rosa </td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Semi Sombra </td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Suculentas</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Invierno - Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Tenaza</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            <tr>
+                <td>Teléfono</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>No Presenta</td>
+                <td>Sombra</td>
+                <td>Abundante</td>
+                <td>Trepadoras</td>
+            </tr>
+            <tr>
+                <td>Tenaza</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera - Verano</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Teresitas</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Tomillo</td>
+                <td>Anual</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Invierno - Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Toronjo</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Moderado</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Moderado</td>
+                <td>Frutales</td>
+            </tr>
+            <tr>
+                <td>Tradescantia Zebrina</td>
+                <td>Perenne</td>
+                <td>Suelo Arenoso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Verano</td>
+                <td>Sombra</td>
+                <td>Moderado</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Tronadora</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Trueno De Venus</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Todo el año</td>
+                <td>Semi Sombra</td>
+                <td>Abundante</td>
+                <td>Arbusto</td>
+            </tr>
+            <tr>
+                <td>Tulia</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Primavera</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Arbol</td>
+            </tr>
+            <tr>
+                <td>Tulipan Mexicano</td>
+                <td>Perenne</td>
+                <td>Suelo Fértil Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera</td>
+                <td>Sol</td>
+                <td>Abundante</td>
+                <td>Planta</td>
+            </tr>
+            <tr>
+                <td>Uña De Señorita</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano</td>
+                <td>Semi Sombra</td>
+                <td>Poca</td>
+                <td>Suculenta</td>
+            </tr>
+            <tr>
+                <td>Vaporub</td>
+                <td>Perenne</td>
+                <td>Suelo Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Sol</td>
+                <td>Poca</td>
+                <td>Aromáticas</td>
+            </tr>
+            <tr>
+                <td>Wedelia</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Rapido</td>
+                <td>Primavera - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Rastreras</td>
+            </tr>
+            <tr>
+                <td>Yuca Verde</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano - Otoño</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Palmera</td>
+            </tr>
+            <tr>
+                <td>Zamioculca</td>
+                <td>Perenne</td>
+                <td>Suelo Arcilloso Bien Drenado</td>
+                <td>Crecimiento Lento</td>
+                <td>Verano - Invierno</td>
+                <td>Semi Sombra</td>
+                <td>Moderado</td>
+                <td>Palmera</td>
+            </tr>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <script>getUniqueValuesFromColumn()
+    </script> -->
+    <script>
+        window.onload = () => {
+            console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+        };
+
+        getUniqueValuesFromColumn()
+        
+    </script>
+</div>
+</div>
+</body>
+
+</html>
